@@ -92,9 +92,13 @@ Adam é uma combinação dos métodos AdaGrad e RMSProp, que são outros algorit
 Aqui estão as fórmulas matemáticas para o Adam:
 
 $$m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot g_t$$
+
 $$v_t = \beta_2 \cdot v_{t-1} + (1 - \beta_2) \cdot g_t^2$$
+
 $$\hat{m}_t = \frac{m_t}{1 - \beta_1^t}$$
+
 $$\hat{v}_t = \frac{v_t}{1 - \beta_2^t}$$
+
 $$\theta_t = \theta_{t-1} - \alpha \cdot \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}$$
 
 Onde:
